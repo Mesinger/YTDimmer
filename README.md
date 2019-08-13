@@ -14,13 +14,13 @@ YTDimmer is working with Share actions. Which means, in your YoutubeApp, click o
 When YTDimmer receives a Share action, it puts a completely blank overlay Activity, on top of the Youtube App. By getting the WindowManager.LayoutParams, you can set the dimAmount between 0.f and 1.f, while 1.f means completely dimmed.
 
 ```java
-        //Background of Dialog dimmed to 0x000000 with 1.0f
-        WindowManager.LayoutParams layoutParams = window.getAttributes();
+//Background of Dialog dimmed to 0x000000 with 1.0f
+WindowManager.LayoutParams layoutParams = window.getAttributes();
 
-        //set this between 0.f and 1.f (1.f 100% dimmed, 0.f 0% dimmed)
-        layoutParams.dimAmount = 1.f;
+//set this between 0.f and 1.f (1.f 100% dimmed, 0.f 0% dimmed)
+layoutParams.dimAmount = 1.f;
 
-        window.setAttributes(layoutParams);
+window.setAttributes(layoutParams);
 ```
 
 ## Downsides, room for improvements
